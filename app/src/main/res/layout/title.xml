@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="50dp" 
+	android:background="@drawable/title_bg"
+	>
+	<!--
+	android:background="@color/red"
+
+	-->
+	<RelativeLayout android:layout_width="70dp"
+		android:layout_height="50dp" android:paddingRight="4dp"
+		android:paddingTop="0dp"
+		android:paddingBottom="5dp"
+		android:gravity="center_horizontal|center_vertical"
+		android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+		android:layout_alignParentLeft="true"
+		android:id="@+id/title_re"
+		>
+
+		<Button
+		    android:id="@+id/bnt_global_back"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:paddingRight="4dp"
+		    android:textColor="@color/black"
+		    
+		    android:visibility="invisible"
+		    android:background="@drawable/item_setting_black_add2"
+		     ><!--
+		    android:background="@drawable/title_btn_back"
+
+		--></Button>
+
+		<Button
+		    android:id="@+id/bnt_global_back1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:paddingRight="4dp"
+		    android:textColor="@color/black"
+		    android:visibility="invisible"
+		    android:background="@drawable/title_back_white_icon">
+		     </Button>
+	</RelativeLayout>
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_centerHorizontal="true"
+		android:id="@+id/title_more_type"
+		>
+			
+		<TextView android:id="@+id/title" android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:textColor="@color/white"
+			android:textSize="@dimen/font_size_middle" 
+			android:layout_centerHorizontal="true" android:paddingTop="10dp"
+			android:layout_toRightOf="@+id/title_more_type2"
+			
+			 />
+	
+
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="70dp"
+		android:layout_height="40dp" 
+		android:paddingRight="10dp"
+		android:paddingTop="0dp" 
+		android:paddingBottom="0dp"
+		android:layout_centerHorizontal="true" 
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true">
+		<Button android:text="@string/global_str_edit" android:id="@+id/global_edit"
+			android:layout_width="wrap_content" 
+			android:layout_height="fill_parent"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="4dp"
+			android:background="@color/transparent_background"
+			android:visibility="invisible">
+			<!--
+			android:background="@drawable/loginout" 
+		-->
+		</Button>
+	</RelativeLayout>
+	
+	
+		
+		<RelativeLayout android:layout_width="70dp"
+		android:layout_height="40dp" 
+		android:paddingRight="10dp"
+		android:paddingTop="0dp" 
+		android:paddingBottom="0dp"
+		android:layout_centerHorizontal="true" 
+		android:layout_centerVertical="true"
+		android:layout_alignParentRight="true">
+		<Button 
+		    android:text="" android:id="@+id/global_setting"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="4dp"
+			android:background="@drawable/title_setting_white_icon"
+			android:visibility="invisible">
+			<!--
+			android:background="@drawable/loginout" 
+		-->
+		</Button>
+		
+		
+		<Button 
+		    android:text="" android:id="@+id/global_search"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="4dp"
+			android:background="@drawable/item_setting_add_tool_search"
+			android:visibility="invisible">
+		</Button>
+		
+		
+		<ProgressBar 
+		android:id="@+id/progressBar1" 
+		android:layout_height="40dp"
+		android:layout_width="40dp"
+		android:layout_alignParentTop="true"
+		android:layout_alignParentRight="true"
+		android:visibility="invisible"
+		>
+	 </ProgressBar>
+		
+		
+	</RelativeLayout>
+</RelativeLayout>

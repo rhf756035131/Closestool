@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="citys">
+		<item>北京市</item>
+		<item>上海市</item>
+		<item>天津市</item>
+		<item>重庆市</item>
+	</string-array>
+	
+	<string-array name="NetProtocol">
+	    <item>请选择：</item>
+		<item>@string/tcpserver</item>
+		<item>@string/tcpclient</item>
+		<item>@string/udpserver</item>
+		<item>@string/udpclient</item>
+	</string-array>
+	
+		<string-array name="NetMode">
+	    <item>请选择：</item>
+		<item>@string/stasmartc</item>
+		<item>@string/stamanual</item>
+		<item>@string/wirelessap</item>
+	</string-array>
+</resources>

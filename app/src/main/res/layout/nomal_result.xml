@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="6"
+        android:columnCount="4">
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="葡萄糖："
+        android:id="@+id/TV_GLU"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_GLU_R"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="胆红素："
+        android:id="@+id/TV_BIL"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_BIL_R"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="比重："
+        android:id="@+id/TV_SG"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_SG_R"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="PH："
+        android:id="@+id/TV_PH"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="偏高"
+        android:id="@+id/TV_PH_R"
+        android:layout_row="1"
+        android:layout_column="3"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="酮体："
+        android:id="@+id/TV_KET"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/TV_KET_R"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:gravity="left"
+        android:text="正常" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="潜血："
+        android:id="@+id/TV_BLD"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_BLD_R"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="蛋白质："
+        android:id="@+id/TV_PRO"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/TV_RPO_R"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:gravity="left"
+        android:text="正常" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/TV_URO"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:gravity="right"
+        android:text="尿胆原：" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_URO_R"
+        android:layout_row="3"
+        android:layout_column="3"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="亚硝酸盐："
+        android:id="@+id/TV_NIT"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_NIT_R"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="白细胞："
+        android:id="@+id/TV_LEU"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_LEU_R"
+        android:layout_row="4"
+        android:layout_column="3"
+        android:gravity="left" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="抗坏血酸："
+        android:id="@+id/TV_VC"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:gravity="right" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="正常"
+        android:id="@+id/TV_VC_R"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:gravity="left" />
+    </GridLayout>
+</LinearLayout>

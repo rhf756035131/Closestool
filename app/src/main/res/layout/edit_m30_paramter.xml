@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <include layout="@layout/title" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/IPAddrView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WIFI名"
+                    android:textSize="18px"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/wangluomingcheng"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.82"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#000000"
+                    >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/IPAddrView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="加密"
+                    android:textSize="18px"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/jiamifangshi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip" >
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- <LinearLayout -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_marginTop="5dip" -->
+        <!-- android:gravity="center_vertical" -->
+        <!-- android:orientation="horizontal" > -->
+
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/IPAddrView2" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:paddingLeft="5dip" -->
+        <!-- android:text="加密方式：" -->
+        <!-- android:textSize="18px" -->
+        <!-- android:textStyle="bold" /> -->
+        <!-- <Spinner -->
+        <!-- android:id="@+id/jiamifangshi" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="50dip" > -->
+        <!-- </Spinner> -->
+
+
+        <!-- </LinearLayout> -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/IPAddrView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密码："
+                android:textSize="18px"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/mima"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#000000"
+                >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/spinnerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wangluomoshi" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/gongzuomoshi"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip" >
+            </Spinner>
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/IPAddrView2" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:paddingLeft="5dip" -->
+            <!-- android:text="加密方式：" -->
+            <!-- android:textSize="18px" -->
+            <!-- android:textStyle="bold" /> -->
+
+
+            <!-- <Spinner -->
+            <!-- android:id="@+id/jiamifangshi" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="50dip" > -->
+            <!-- </Spinner> -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/spinnerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wangluoxieyi" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/wangluoxieyi"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip" >
+            </Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/remoteip1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remoteip" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/remoteip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="192.168.11.1"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/remoteport1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remoteport" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/remoteport"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:singleLine="true"
+                android:text="8080"
+                android:textColor="#000000" >
+            </EditText>
+
+            <TextView
+                android:id="@+id/localport1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/localport" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/localport"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:singleLine="true"
+                android:text="8080"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/spinnerText6"
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jiaoyanwei" />
+
+                <Spinner
+                    android:id="@+id/jiaoyanwei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/spinnerText7"
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tingzhiwei" />
+
+                <Spinner
+                    android:id="@+id/tingzhiwei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/spinnerText4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/botelv" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/botelv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip" >
+                </Spinner>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/spinnerText5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dip"
+                    android:text="@string/shujuwei" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/shujuwei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dip" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/checkbox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="启用DHCP" />
+        </LinearLayout>
+
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/localip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本地IP:" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/t_localip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="192.168.11.1"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+            
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/ziwangyanma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="子网掩码:" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/t_ziwangyanma"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="255.255.255.0"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+        
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/wangguan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网关:" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/t_wangguan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="192.168.11.1"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/dns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DNS:" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/t_dns"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="192.168.11.1"
+                android:textColor="#000000" >
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <!-- <Button -->
+            <!-- android:id="@+id/editm30paramter_btn1" -->
+            <!-- android:layout_width="100dip" -->
+            <!-- android:layout_height="60dp" -->
+            <!-- android:layout_marginTop="10dp" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:text="查询" -->
+            <!-- android:visibility="invisible"/> -->
+
+            <Button
+                android:id="@+id/bnt_edit_device_paramter_quit"
+                style="@style/ButtonStyle"
+                android:layout_width="100dip"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tijiao"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bnt_edit_device_paramter_check"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/check"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.example.rahul.closestool"
+      android:versionCode="1"
+      android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<!-- 	<uses-permission android:name="android.permission.NET_ADMIN" /> -->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+<!--         android:theme="@android:style/Animation" -->
+        <activity android:name="AndroidSQL" >
+              <intent-filter>
+	                <action android:name="android.intent.action.MAIN" />
+	                <category android:name="android.intent.category.LAUNCHER" />
+	            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="EditM30Paramter"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            </activity>
+        <activity android:name="M30ListItemDetail" android:screenOrientation="portrait"> </activity>
+		<activity android:name="WifiAdmin" android:screenOrientation="portrait"> </activity>
+        <activity android:name="mediatek.android.IoTManager.SmartConnection"
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            </activity>
+        <activity android:name="mediatek.android.IoTManager.IoTManager" android:label="@string/app_name_ver" android:configChanges="orientation">
+
+		</activity>
+        <activity android:name="mediatek.android.IoTManager.IoTManagement"
+		          android:configChanges="orientation"
+		          android:windowSoftInputMode="adjustPan">
+		</activity>
+        <activity
+            android:name=".Closestool_info"
+            android:label="@string/Closestool_info"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+    </application>
+    <uses-sdk android:minSdkVersion="7" />
+
+</manifest>
