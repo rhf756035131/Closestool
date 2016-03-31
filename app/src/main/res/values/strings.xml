@@ -106,7 +106,10 @@
 	<string name="uart_rx">Uart Rx </string>
 	<string name="ipaddr_name">IP Addr: </string>
     <string name="action_done">完成</string>
+    <string name="action_update">刷新</string>
+    <string name="action_read_time">Sampling time</string>
     <string name="Closestool_info">检测结果</string>
     <string name="Closestool_timslist">统计列表</string>
     <string name="Closestool_check_nomal_info">常规检测结果</string>
+    <string name="title_activity_search_device">SearchDeviceActivity</string>
 </resources>

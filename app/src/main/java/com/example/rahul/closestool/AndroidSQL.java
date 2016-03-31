@@ -491,20 +491,20 @@ public class AndroidSQL extends Activity {
 //				int ipAddress=wifiinfo.getIpAddress();
 ////				DhcpInfo dhcpinfo=wifimanager.getDhcpInfo();
 ////				System.out.println("网络信息："+Formatter.formatIpAddress(dhcpinfo.gateway));
-//				
-//				
-//						
+//
+//
+//
 ////				String ip=(ipAddress & 0xFF ) + "." + ((ipAddress>> 8 ) & 0xFF) + "." +((ipAddress>> 16 ) & 0xFF) + "." +(ipAddress>> 24 & 0xFF) ;
 //				String ip=(ipAddress & 0xFF ) + "." + ((ipAddress>> 8 ) & 0xFF) + "." +((ipAddress>> 16 ) & 0xFF) + "." +"255" ;
 //				System.out.println(ip);
-//			
+//
 //			byte out[] =str.getBytes();
 //			InetAddress address;
 //			try {
 //				address = InetAddress.getByName(ip);
-//				dataPacket = new DatagramPacket(out, out.length, address, 988);  
-//		        dataPacket.setData(out);  
-//			    dataPacket.setLength(out.length);  
+//				dataPacket = new DatagramPacket(out, out.length, address, 988);
+//		        dataPacket.setData(out);
+//			    dataPacket.setLength(out.length);
 ////		        try {
 //		        	MulticastSocket ms = null;
 //					try {
@@ -512,36 +512,36 @@ public class AndroidSQL extends Activity {
 //						ms.send(dataPacket);
 ////						ms.getNetworkInterface();
 ////						System.out.println("ms的信息"+ms.getRemoteSocketAddress());
-//						
-//						
-//						
-////						try {  
-////				            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {  
-////				                NetworkInterface intf = en.nextElement();  
-////				                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {  
-////				                    InetAddress inetAddress = enumIpAddr.nextElement();  
-////				                    if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address) {  
-////				                    //if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet6Address) {  
+//
+//
+//
+////						try {
+////				            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
+////				                NetworkInterface intf = en.nextElement();
+////				                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
+////				                    InetAddress inetAddress = enumIpAddr.nextElement();
+////				                    if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address) {
+////				                    //if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet6Address) {
 ////				                        System.out.println( "网络类型判断"+inetAddress.getHostAddress().toString() );
 ////				                        byte[] b=inetAddress.getAddress();
 ////				                        String c=new String(b.toString() );
-////				                        
+////
 ////				                        System.out.println( "getLocalHost"+ c );
-////				                    }  
-////				                }  
-////				            }  
-////				        } catch (Exception e) {  
-////				        }  
-//						
-//						
-//						
+////				                    }
+////				                }
+////				            }
+////				        } catch (Exception e) {
+////				        }
+//
+//
+//
 //					} catch (IOException e) {
 //						// TODO Auto-generated catch block
 //						e.printStackTrace();
-//					} 
-//					
-//					
-//					
+//					}
+//
+//
+//
 //					while(a<=3)
 //					{
 //						a+=1;
@@ -559,8 +559,8 @@ public class AndroidSQL extends Activity {
 //							// TODO Auto-generated catch block
 ////							e.printStackTrace();
 //						}
-////						udpresult = new String(pack.getData(), pack.getOffset(), pack.getLength());	
-////						String udpresult = new String(pack.getData());	
+////						udpresult = new String(pack.getData(), pack.getOffset(), pack.getLength());
+////						String udpresult = new String(pack.getData());
 ////						String udpresult =pack.getData().toString();
 //						byte[] Dat= new byte[512];
 ////						byte[] Dat= pack.getData();
@@ -573,36 +573,36 @@ public class AndroidSQL extends Activity {
 //				        {
 ////				        	System.out.println("已查找到字符串"+uuid);
 //				        	System.out.println("IP地址是："+a1);
-//				        	
-//				        	
-//				        	 Message mes=new Message();  
+//
+//
+//				        	 Message mes=new Message();
 //				        	 mes.what=1;
-//				        	 mes.obj=udpresult+"+"+pack.getAddress();			
+//				        	 mes.obj=udpresult+"+"+pack.getAddress();
 ////				        	 System.out.println(mes.obj);
 //				        	 handler.sendMessage(mes);
-//				        	 
+//
 ////				        	return 1; //如果查找到则返回1
 //				        }
-//				        
+//
 //					}
-//					
-//					
-////					Message mes=new Message();    
+//
+//
+////					Message mes=new Message();
 ////					mes.what=2;
-////		        	mes.obj="closeprogressbar";					       
+////		        	mes.obj="closeprogressbar";
 ////		        	handler.sendMessage(mes);
-////		        	
+////
 ////		        	ms.close();
-//		        	
+//
 //					System.out.println("接收结束");
 //			} catch (UnknownHostException e) {
 //				// TODO Auto-generated catch block
 //				e.printStackTrace();
-//			}  
+//			}
 //		}
 //		else
 //		{
-//			
+//
 //		}
 //			return 0;
 //	}

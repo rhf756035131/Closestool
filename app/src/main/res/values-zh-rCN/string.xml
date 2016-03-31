@@ -105,4 +105,5 @@
 	<string name="uart_tx">Uart Tx </string>
 	<string name="uart_rx">Uart Rx </string>
 	<string name="ipaddr_name">IP Addr: </string>
+    <string name="action_read_time">采样时间</string>
 </resources>
