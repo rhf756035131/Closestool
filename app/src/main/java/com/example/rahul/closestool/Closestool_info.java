@@ -49,6 +49,12 @@ public class Closestool_info  extends ActionBarActivity {
     public static final  byte cmd_error=0x07;
     public static final  byte cmd_close_bt=0x09;
     public static final  byte cmd_rename_bt=0x0a;
+    public static final  byte cmd_auto_test=0x0B;
+   // public static final  byte cmd_auto_test=0x0B;
+    public static final  byte cmd_collect_finger=0x20;
+    public static final  byte cmd_regist_finger=0x40;
+    public static final  byte cmd_del_finger=0x44;
+
 
     public static final int S_TV_GLU_R = 9;
     //public static final  byte[] cmd_device_ack = new byte[]{(byte)0x93,(byte)0x8e,0x08,0x00,0x08,0x01,0x43,0x4f,0x4e,0x54,0x45};
@@ -74,6 +80,7 @@ public class Closestool_info  extends ActionBarActivity {
     private TextView TV_LEU_R;
     private TextView TV_VC_R;
     private TextView TV_Prompt;
+    private Button B_FINGER, B_DELFINGER;
 
     private byte[] revice_date=new byte[1024];
     private int revice_date_length=0;
@@ -108,6 +115,10 @@ public class Closestool_info  extends ActionBarActivity {
         TV_NIT_R=(TextView)findViewById(R.id.TV_NIT_R);
         TV_LEU_R=(TextView)findViewById(R.id.TV_LEU_R);
         TV_VC_R =(TextView)findViewById(R.id.TV_VC_R);
+        B_FINGER =(Button)findViewById(R.id.B_FINGER);
+        B_DELFINGER =(Button)findViewById(R.id.B_DELFINGER);
+        B_FINGER.setOnClickListener(new BClickListener());
+        B_DELFINGER.setOnClickListener(new BClickListener());
 
         TV_Prompt=(TextView)findViewById(R.id.TV_Prompt);
     }
@@ -385,8 +396,6 @@ public class Closestool_info  extends ActionBarActivity {
     private Handler LinkDetectedHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-           // Log.e("server", "msg.what=" + msg.what);
-            //Toast.makeText(mContext, (String)msg.obj, Toast.LENGTH_SHORT).show();
             if(msg.what==1)
             {
                 int date_length=msg.arg1;
@@ -431,13 +440,28 @@ public class Closestool_info  extends ActionBarActivity {
                             break;
                         case cmd_rename_bt:
                             break;
+                        case cmd_collect_finger:{
+                            if(buf_data[6]==0x0) {
+                                Toast.makeText(mContext, "检查到指纹输入", Toast.LENGTH_LONG).show();
+                            }else if(buf_data[6]==0x28){
+                                Toast.makeText(mContext, "未检出到指纹输入", Toast.LENGTH_LONG).show();
+                            }else{
+                                Toast.makeText(mContext, "代码有错", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                            break;
+                        case cmd_del_finger:{
+                            if(buf_data[6]==0x0) {
+                                Toast.makeText(mContext, "删除指纹成功", Toast.LENGTH_LONG).show();
+                            }else if(buf_data[6]==0x28){
+                                Toast.makeText(mContext, "删除指纹失败", Toast.LENGTH_LONG).show();
+                            }else{
+                                Toast.makeText(mContext, "代码有错", Toast.LENGTH_LONG).show();
+                            }
+                        }
+                            break;
                         default:
 
-//                if(buf_data[5]==(byte)0x04) {
-//                    set_textview_GLU_R(buf_data[16] & 0x07);
-//                }else if(buf_data[5]==(byte)0x01){
-//                    Toast.makeText(mContext, "硬件已链接", Toast.LENGTH_SHORT).show();
-//                }
                     }
                 }
             }
@@ -452,6 +476,29 @@ public class Closestool_info  extends ActionBarActivity {
 
         }
     };
+    class BClickListener implements View.OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            // TODO Auto-generated method stub
+            switch (v.getId()) {
+                case R.id.B_FINGER:
+                    setCommand(cmd_collect_finger);
+                    sendCommand(cmd_collect_finger);
+                    ShowSpinnerDialog();
+                    Toast.makeText(mContext, "采集指纹", Toast.LENGTH_SHORT).show();
+                    break;
+                case R.id.B_DELFINGER:
+                    setCommand(cmd_del_finger);
+                    sendCommand(cmd_del_finger);
+                    ShowSpinnerDialog();
+                    Toast.makeText(mContext, "删除指纹", Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
     final protected static char[] hexArray = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
     public  String byteArrayToHexString(byte[] bytes) {
         char[] hexChars = new char[bytes.length*2];
