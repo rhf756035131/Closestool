@@ -448,6 +448,8 @@ public class Closestool_info  extends ActionBarActivity {
                             }else{
                                 Toast.makeText(mContext, "代码有错", Toast.LENGTH_LONG).show();
                             }
+                            setCommand((byte)0x0);
+                            del_revice_date();
                         }
                             break;
                         case cmd_del_finger:{
@@ -458,6 +460,8 @@ public class Closestool_info  extends ActionBarActivity {
                             }else{
                                 Toast.makeText(mContext, "代码有错", Toast.LENGTH_LONG).show();
                             }
+                            setCommand((byte)0x0);
+                            del_revice_date();
                         }
                             break;
                         default:
@@ -600,14 +604,14 @@ public class Closestool_info  extends ActionBarActivity {
                 // TODO Auto-generated method stub
                 try {
                     int time=0;
-                    while ((getCommand()!=0x0)&&(time<50)) {
+                    while ((getCommand()!=0x0)&&(time<5)) {
                         Thread.sleep(500);
                         time++;
                         Message msg = new Message();
                         msg.what = 2;
                         LinkDetectedHandler.sendMessage(msg);
                         Log.e("server", "cmd_read_single_date="+getCommand());
-                        Thread.sleep(50);
+                        Thread.sleep(1000);
                         // dialog.dismiss();
                     }
                     updatedialog.cancel();
